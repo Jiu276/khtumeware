@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KhtumeWare — 五金外贸独立站
 
-## Getting Started
+对标 [Amerdeco](https://amerdeco.com/) 风格的 B2B + B2C 橱柜五金独立站，基于 `Khtumeware_Full_Tag_System_For_Developer.docx` 完整标签体系。
 
-First, run the development server:
+## 本地运行
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+打开 http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 主要页面
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| 路径 | 功能 |
+|------|------|
+| `/` | 首页：Hero、热销、按 Finish/分类、品牌故事、评价 |
+| `/shop` | 商品列表 + 多维筛选（Finish/Material/Style/Room） |
+| `/collections/cabinet-pulls/matte-black` | SEO 分类集合页 |
+| `/products/design3768-contemporary-cabinet-handles` | 产品详情 + 颜色 Swatch |
+| `/cart` | 购物车 |
+| `/checkout` | B2B/B2C 结账 |
+| `/about` `/contact` | 品牌与询盘 |
 
-## Learn More
+## 标签体系
 
-To learn more about Next.js, take a look at the following resources:
+见根目录 `Khtumeware_Full_Tag_System_For_Developer.docx`：
+- 6 大一级分类 + 完整子分类
+- Finish / Size / Style / Material / Shape / Function / Room 标签
+- SKU 规范：`KH-PULL-128-MB` 等
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 部署
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Ubuntu 24.04 + Cloudflare + Nginx + PM2，详见 [DEPLOY.md](./DEPLOY.md)。
 
-## Deploy on Vercel
+## 素材
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+产品场景图使用 [Unsplash](https://unsplash.com)（可商用），关键词见 `免费高清素材.docx`。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 下一步
+
+- [ ] 接入 Stripe / PayPal
+- [ ] 后台 CMS 或 WooCommerce 同步
+- [ ] 批量 CSV 导入商品
